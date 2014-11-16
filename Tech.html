@@ -1,0 +1,44 @@
+<section id="lightboxSlider">				
+<div id='slider'>
+	<ul>
+		<li>
+			<video width="640" height="360" style="width: 100%; height: 100%;" id="player1">
+			<source src="https://cloudednetworks.co.uk/media/Tech.mp4" type="video/mp4">
+			</video>	 
+		</li>
+	</ul>
+</div>
+</section>
+<section id="overlay">
+	<div id="overlayDescription">
+		<h1><div class="blackBG">TECHNOLOGY</div></h1>
+		<p>PUSHING THE TECHNICAL CAPABILITES OF OUR RESEARCH & DEVELOPMENT TEAM TO UNTHINKABLE RESULTS, MAKING CLOUDED NETWORKS ALWAYS AT THE FOREFRONT OF TECHNOLOGY. BEING EXPERTS IN ALL ASPECTS OF APPLE PRODUCTS WE BLEND OUR SYSTEMS TO FUNCTION ON ALL OPERATING PLATEFORMS. TECHNOLOGY FOR US IS CREATING OR UTILISING CURRENT PRODUCTS TO GENERATE A PACKAGE THAT WILL WORK FOR YOU. ALL DEVELOPMENTS NEED TO BE FLEXIBLE WITH CUSTOMER'S NEEDS AT ANY POINT OF THIS PROCESS, AS WELL AS THE FINAL PACKAGE. IF IT DOES NOT EXIST WE WILL CREATE IT.</p>
+	</div>
+	
+	<a id="next"></a>
+	<a id="closeBtn"></a>
+	<a id="prev"></a>
+	<header><a><img id="logoWhite" src="https://cloudednetworks.co.uk/img/logo_instnt_white.png"></a></header>
+</section>
+<script src="mediaelementsPlayer/mediaelement-and-player.min.js"></script>
+<script>
+var player = new MediaElementPlayer('#player1',{
+	features: ['playpause','current','tracks','progress','duration','volume'],
+    enableAutosize: true,
+    enableKeyboard: true,
+    autoplay: true,
+    pauseOtherPlayers: true,
+	success: function(media, node, player) {
+	     media.addEventListener('canplay', function(e) {
+			player.play();
+		});
+	}
+});
+$("#lightboxSlider").bind("touchmove", function (event) {
+	player.pause();
+});
+
+$("#next, #prev").click(function() {
+	player.pause();
+});
+</script>

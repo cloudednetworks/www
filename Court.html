@@ -1,0 +1,47 @@
+<section id="lightboxSlider">				
+<div id='slider'>
+	<ul>
+		<li>
+			<video width="640" height="360" style="width: 100%; height: 100%;" id="player1">
+			<source src="https://cloudednetworks.co.uk/media/Court.mp4" type="video/mp4">
+			</video>	 
+		</li>
+		<li style='background-image: url("https://cloudednetworks.co.uk/img/cases/00_highlight.jpg")'  class="cover"></li>
+		<li style='background-image: url("https://cloudednetworks.co.uk/img/cases/36.jpg")' class="cover"></li>
+		<li style='background-image: url("https://cloudednetworks.co.uk/img/cases/39.jpg")'  class="cover"></li>
+	</ul>
+</div>
+</section>
+<section id="overlay">
+	<div id="overlayDescription">
+		<h1><div class="blackBG">MINISTRY OF DIGITAL</div></h1>
+		<p>CLOUDED NETWORKS HAS BEEN WORKING WITH ALL DEPARTMENTS OF THE M.O.J. TO CREATE A NEW ELECTRONIC PRESENTATION OF EVIDENCE SYSTEM THAT WILL TRANSPORT THE CURRENT COURT ENVIRONMENT INTO THE 21ST CENTURY. WITH EXTENSIVE RESEARCH SPANNING OVER NEARLY 3 YEARS WE ARE READY TO IMPLEMENT OUR BESPOKE SOLUTION. BY USING APPLE IPADS AS SLAVE MONITORS ALLOWING ALL USERS WITHIN THE COURT TO VIEW EVIDENCE SIMULTANEOUSLY, RESULTING IN ABOLISHING PAPER WITHIN THE COURTROOM ENVIRONMENT. OUR SOLUTION WILL BRING THE CPS DIGITISATION PROGRAM PAST THE COURTROOM DOOR AND ALLOW A MORE EFFICIENT, TIME SAVING AND COST EFFECTIVE LEGAL SYSTEM.</p>
+	</div>
+	
+	<a id="next"></a>
+	<a id="closeBtn"></a>
+	<a id="prev"></a>
+	<header><a><img id="logoWhite" src="https://cloudednetworks.co.uk/img/logo_instnt_white.png"></a></header>
+</section>
+<script src="mediaelementsPlayer/mediaelement-and-player.min.js"></script>
+<script>
+var player = new MediaElementPlayer('#player1',{
+	features: ['playpause','current','tracks','progress','duration','volume'],
+    enableAutosize: true,
+    enableKeyboard: true,
+    autoplay: true,
+    pauseOtherPlayers: true,
+	success: function(media, node, player) {
+	     media.addEventListener('canplay', function(e) {
+			player.play();
+		});
+	}
+});
+$("#lightboxSlider").bind("touchmove", function (event) {
+	player.pause();
+});
+
+$("#next, #prev").click(function() {
+	player.pause();
+});
+</script>

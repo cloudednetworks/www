@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Clouded Networks</name>
+
+    <description>
+        WE ARE A COMMERCIAL, PUBLIC SECTOR DIGITAL INNOVATION COMPANY - PRESENT THE FUTURE. CLOUDED NETWORKS DIGITAL SOLUTIONS COVERS ALL FACFTORS OF ENVIRONMENTS SUCH AS COURTROOMS, WEB DESIGN, PRODUCTION, FILMS, NHS, MUSIC, COMMERCIALS, DIGITL ADVERTISING, EDUCATION DIRECTORY INDEX AND MANY MORE. THIS APP ALLOW FULL ACCESS TO OUR RESOURCES.
+    </description>
+
+    <author href="https://cloudednetworks.co.uk" email="info@pcloudednetworks.co.uk">
+        JAME KEELEY 
+    </author>
+
+</widget>
